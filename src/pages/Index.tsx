@@ -28,18 +28,55 @@ const Index = () => {
       level: "Начинающий", 
       price: "29 990 ₽",
       features: ["Дизайн-портфолио", "Работа с клиентами", "Сертификат"]
+    },
+    {
+      title: "Data Science",
+      description: "Полный курс по науке о данных: от статистики до глубокого машинного обучения",
+      duration: "6 месяцев",
+      level: "Продвинутый",
+      price: "69 990 ₽",
+      features: ["Реальные проекты", "AI/ML алгоритмы", "Сертификат"]
+    },
+    {
+      title: "DevOps инженер",
+      description: "Изучите Docker, Kubernetes, CI/CD и облачные технологии",
+      duration: "5 месяцев",
+      level: "Средний",
+      price: "59 990 ₽",
+      features: ["Hands-on практика", "AWS/Azure", "Сертификат"]
+    },
+    {
+      title: "Мобильная разработка",
+      description: "Создавайте нативные и кроссплатформенные мобильные приложения",
+      duration: "4 месяца",
+      level: "Средний",
+      price: "54 990 ₽",
+      features: ["iOS/Android", "React Native", "Сертификат"]
     }
   ];
 
   const plans = [
     {
+      name: "Старт",
+      price: "990 ₽/мес",
+      description: "Попробуйте платформу",
+      features: [
+        "2 курса в месяц",
+        "Базовые материалы", 
+        "Сертификаты",
+        "Мобильное приложение"
+      ],
+      popular: false
+    },
+    {
       name: "Базовый",
       price: "1 990 ₽/мес",
       description: "Доступ к основным курсам",
       features: [
-        "3 курса в месяц",
-        "Базовая поддержка", 
-        "Сертификаты",
+        "5 курсов в месяц",
+        "Техническая поддержка", 
+        "Все сертификаты",
+        "Практические задания",
         "Мобильное приложение"
       ],
       popular: false
@@ -49,11 +86,12 @@ const Index = () => {
       price: "3 990 ₽/мес",
       description: "Полный доступ ко всем курсам",
       features: [
-        "Безлимитный доступ",
+        "Безлимитный доступ ко всем курсам",
         "Приоритетная поддержка",
         "Персональные консультации",
-        "Проектные ревью",
-        "Networking события"
+        "Проектные ревью от экспертов",
+        "Networking события",
+        "Карьерный центр"
       ],
       popular: true
     },
@@ -63,9 +101,11 @@ const Index = () => {
       description: "Для команд от 5 человек",
       features: [
         "Все возможности Pro",
-        "Корпоративная аналитика",
-        "Кастомные программы",
-        "Dedicated менеджер"
+        "Корпоративная аналитика прогресса",
+        "Кастомные программы обучения",
+        "Персональный менеджер",
+        "Групповые проекты",
+        "Внутренние хакатоны"
       ],
       popular: false
     }
@@ -81,7 +121,7 @@ const Index = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Icon name="GraduationCap" className="h-5 w-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">InSTART</span>
+              <span className="text-2xl font-bold text-gray-900">Образовательная платформа</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#courses" className="text-gray-600 hover:text-blue-600 transition-colors">Курсы</a>
@@ -121,16 +161,16 @@ const Index = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">15,000+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">300,000+</div>
                 <div className="text-gray-600">Выпускников</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                <div className="text-gray-600">Трудоустройство</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
+                <div className="text-gray-600">Курсов</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">4.9</div>
-                <div className="text-gray-600">Рейтинг курсов</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">4.8</div>
+                <div className="text-gray-600">Рейтинг платформы</div>
               </div>
             </div>
           </div>
@@ -145,8 +185,8 @@ const Index = () => {
               Популярные курсы
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Выбирайте из более чем 50 программ обучения, 
-              разработанных экспертами индустрии
+              Выбирайте из более чем 25 программ обучения по современным 
+              востребованным профессиям, разработанных экспертами индустрии
             </p>
           </div>
 
@@ -211,7 +251,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, index) => (
               <Card key={index} className={`relative overflow-hidden transition-transform duration-300 hover-scale ${
                 plan.popular 
@@ -363,7 +403,7 @@ const Index = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Icon name="GraduationCap" className="h-5 w-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">InSTART</span>
+              <span className="text-2xl font-bold text-gray-900">Образовательная платформа</span>
             </div>
             <p className="text-gray-600 mb-6">
               Образовательная платформа нового поколения
