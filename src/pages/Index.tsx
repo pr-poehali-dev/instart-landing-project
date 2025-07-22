@@ -6,106 +6,129 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const courses = [
     {
-      title: "Веб-разработка с нуля",
-      description: "Изучите HTML, CSS, JavaScript и React для создания современных веб-приложений",
-      duration: "4 месяца",
-      level: "Начинающий",
-      price: "49 990 ₽",
-      features: ["Практические проекты", "Менторская поддержка", "Сертификат"]
-    },
-    {
-      title: "Python для анализа данных",
-      description: "Освойте Python, pandas, numpy и машинное обучение для работы с данными",
-      duration: "3 месяца", 
-      level: "Средний",
-      price: "39 990 ₽",
-      features: ["Real-world кейсы", "Портфолио проектов", "Сертификат"]
-    },
-    {
-      title: "UI/UX Дизайн",
-      description: "Создавайте пользовательские интерфейсы в Figma и изучите основы UX-исследований",
+      title: "SMM Специалист с нуля",
+      description: "Изучите продвижение в соцсетях: Instagram, VK, TikTok. Создание контента и настройка рекламы",
       duration: "2 месяца",
+      level: "Начинающий",
+      price: "Включено в тариф",
+      features: ["Stories и Reels", "Работа с блогерами", "Сертификат"]
+    },
+    {
+      title: "Менеджер маркетплейсов",
+      description: "Управление товарами на Wildberries и Ozon. Инфографика, аналитика, вывод в топ",
+      duration: "1.5 месяца", 
+      level: "Начинающий",
+      price: "Включено в тариф",
+      features: ["WB и Ozon", "Карточки товаров", "Сертификат"]
+    },
+    {
+      title: "Копирайтер-маркетолог",
+      description: "Написание продающих текстов для соцсетей, сайтов и рекламных кампаний",
+      duration: "1 месяц",
       level: "Начинающий", 
-      price: "29 990 ₽",
-      features: ["Дизайн-портфолио", "Работа с клиентами", "Сертификат"]
+      price: "Включено в тариф",
+      features: ["Продающие тексты", "Сценарии прогревов", "Сертификат"]
     },
     {
-      title: "Data Science",
-      description: "Полный курс по науке о данных: от статистики до глубокого машинного обучения",
-      duration: "6 месяцев",
-      level: "Продвинутый",
-      price: "69 990 ₽",
-      features: ["Реальные проекты", "AI/ML алгоритмы", "Сертификат"]
+      title: "Дизайнер соцсетей",
+      description: "Создание визуального контента: посты, Stories, обложки. Работа в мобильных приложениях",
+      duration: "1.5 месяца",
+      level: "Начинающий",
+      price: "Включено в тариф",
+      features: ["Мобильные макеты", "AR-маски", "Сертификат"]
     },
     {
-      title: "DevOps инженер",
-      description: "Изучите Docker, Kubernetes, CI/CD и облачные технологии",
-      duration: "5 месяцев",
+      title: "Web-дизайнер на Tilda",
+      description: "Создание сайтов без программирования. Лендинги, интернет-магазины на конструкторе Tilda",
+      duration: "2 месяца",
       level: "Средний",
-      price: "59 990 ₽",
-      features: ["Hands-on практика", "AWS/Azure", "Сертификат"]
+      price: "Включено в тариф",
+      features: ["Figma + Tilda", "Мобильные Taplink", "Сертификат"]
     },
     {
-      title: "Мобильная разработка",
-      description: "Создавайте нативные и кроссплатформенные мобильные приложения",
-      duration: "4 месяца",
+      title: "Эксперт по нейросетям",
+      description: "Генерация текстов, изображений и видео через AI. Автоматизация создания контента",
+      duration: "1 месяц",
       level: "Средний",
-      price: "54 990 ₽",
-      features: ["iOS/Android", "React Native", "Сертификат"]
+      price: "Включено в тариф",
+      features: ["ChatGPT, Midjourney", "AI контент", "Сертификат"]
     }
   ];
 
   const plans = [
     {
-      name: "Старт",
-      price: "990 ₽/мес",
-      description: "Попробуйте платформу",
+      name: "Базовые курсы",
+      price: "1 990 ₽",
+      description: "Основа для старта",
       features: [
-        "2 курса в месяц",
-        "Базовые материалы", 
-        "Сертификаты",
-        "Мобильное приложение"
+        "Более 10 курсов для новичков",
+        "SMM, копирайтинг, дизайн", 
+        "Без ограничений по времени",
+        "Сертификаты о прохождении"
       ],
       popular: false
     },
     {
-      name: "Базовый",
-      price: "1 990 ₽/мес",
-      description: "Доступ к основным курсам",
+      name: "Новые направления",
+      price: "2 990 ₽",
+      description: "Топовые профессии",
       features: [
-        "5 курсов в месяц",
-        "Техническая поддержка", 
-        "Все сертификаты",
-        "Практические задания",
-        "Мобильное приложение"
+        "SMM-специалист",
+        "Мобильные Taplink", 
+        "Чат-боты в Telegram",
+        "AR Creator - маски Instagram",
+        "Нейросети для контента"
       ],
       popular: false
     },
     {
-      name: "Профессиональный",
-      price: "3 990 ₽/мес",
-      description: "Полный доступ ко всем курсам",
+      name: "Маркетплейсы",
+      price: "4 990 ₽",
+      description: "Работа с Wildberries, Ozon",
       features: [
-        "Безлимитный доступ ко всем курсам",
-        "Приоритетная поддержка",
-        "Персональные консультации",
-        "Проектные ревью от экспертов",
-        "Networking события",
-        "Карьерный центр"
+        "Менеджер Wildberries",
+        "Менеджер Ozon",
+        "Инфографика для карточек",
+        "Путь предпринимателя на WB",
+        "Закупки из Китая"
       ],
       popular: true
     },
     {
-      name: "Корпоративный",
-      price: "От 9 990 ₽/мес",
-      description: "Для команд от 5 человек",
+      name: "Все включено",
+      price: "4 990 ₽",
+      description: "Курсы из тарифов 1 и 2",
       features: [
-        "Все возможности Pro",
-        "Корпоративная аналитика прогресса",
-        "Кастомные программы обучения",
-        "Персональный менеджер",
-        "Групповые проекты",
-        "Внутренние хакатоны"
+        "Все базовые курсы",
+        "Все новые направления",
+        "Дополнительные бонусы",
+        "Приоритетная поддержка"
+      ],
+      popular: false
+    },
+    {
+      name: "Премиум",
+      price: "7 990 ₽",
+      description: "Полный доступ ко всем курсам",
+      features: [
+        "Все 35+ курсов проекта",
+        "Новые материалы бесплатно",
+        "Персональные консультации",
+        "Канал поиска клиентов",
+        "VIP поддержка"
+      ],
+      popular: false
+    },
+    {
+      name: "VIP",
+      price: "14 990 ₽",
+      description: "Максимальный пакет",
+      features: [
+        "Все возможности Премиум",
+        "Личные консультации с экспертами",
+        "Индивидуальный план развития",
+        "Приоритет в канале клиентов",
+        "Эксклюзивные материалы"
       ],
       popular: false
     }
@@ -121,7 +144,7 @@ const Index = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Icon name="GraduationCap" className="h-5 w-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">Образовательная платформа</span>
+              <span className="text-2xl font-bold text-gray-900">InSTART</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#courses" className="text-gray-600 hover:text-blue-600 transition-colors">Курсы</a>
@@ -251,7 +274,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             {plans.map((plan, index) => (
               <Card key={index} className={`relative overflow-hidden transition-transform duration-300 hover-scale ${
                 plan.popular 
@@ -403,7 +426,7 @@ const Index = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Icon name="GraduationCap" className="h-5 w-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">Образовательная платформа</span>
+              <span className="text-2xl font-bold text-gray-900">InSTART</span>
             </div>
             <p className="text-gray-600 mb-6">
               Образовательная платформа нового поколения
